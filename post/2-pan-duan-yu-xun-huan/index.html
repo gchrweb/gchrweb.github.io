@@ -1,0 +1,383 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2 判断与循环 | GCHR WEB</title>
+<link rel="shortcut icon" href="https://gchrweb.github.io/favicon.ico?v=1735985119322">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://gchrweb.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="2 判断与循环 | GCHR WEB - Atom Feed" href="https://gchrweb.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="2.1 缩进
+缩进是Python中一种重要的形式，用来区分层次，通常以四个空格的形式存在，但只要同级别的缩进空格一致就不会出问题。
+提示：尽量不要使用Tab键进行缩进，一些版本上会出现错误，还可能和四个空格区分不出而出现错误(部分编辑软件会..." />
+    <meta name="keywords" content="Python教程 从零到入门到放弃" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://gchrweb.github.io">
+  <img class="avatar" src="https://gchrweb.github.io/images/avatar.png?v=1735985119322" alt="">
+  </a>
+  <h1 class="site-title">
+    GCHR WEB
+  </h1>
+  <p class="site-description">
+    时间飞快流逝，记忆永远存在
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="github.com/geng-cr" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              2 判断与循环
+            </h2>
+            <div class="post-info">
+              <span>
+                2024-03-10
+              </span>
+              <span>
+                7 min read
+              </span>
+              
+                <a href="https://gchrweb.github.io/tag/oUg21zOr9/" class="post-tag">
+                  # Python教程 从零到入门到放弃
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h1 id="21-缩进">2.1 缩进</h1>
+<p>缩进是Python中一种重要的形式，用来区分层次，通常以四个空格的形式存在，但只要同级别的缩进空格一致就不会出问题。</p>
+<p>提示：尽量不要使用Tab键进行缩进，一些版本上会出现错误，还可能和四个空格区分不出而出现错误(部分编辑软件会自动转换Tab为空格)。</p>
+<pre><code class="language-python">key = input(&quot;请输入密码：&quot;)
+if key == &quot;666789&quot;:
+    print(&quot;密码正确&quot;)
+    print(&quot;欢迎使用&quot;)
+else:
+  print(&quot;密码错误&quot;)
+</code></pre>
+<p>如上面这段代码，是一个使用if判断语句的代码，几个print()前面都有空格，这就是缩进，一个层次统一比上一层多N个空格。一层缩进由上一行代码末尾的冒号开始。</p>
+<br/>
+<figure data-type="image" tabindex="1"><img src="https://img.duan.ee/z/2024/03/10/65ed49850d92f.png" alt="" loading="lazy"></figure>
+<h1 id="22-if-判断语句">2.2 if 判断语句</h1>
+<p>说到判断，就需要认识一种Python中的量的类型——布偶型Bool</p>
+<p>True 真          False 假         ( 注意要大写 )</p>
+<pre><code class="language-python">if True或False:       #必须
+    如果True就要执行这里
+elif True或False:     #选择性
+    如果第一次False第二次True就执行这里
+elif True或False:     #选择性
+    如果前面都False这次True就执行这里
+#...    选择性
+else:                 #选择性
+    如果都False就执行这里
+</code></pre>
+<p>上面是一个if语句大纲，if、elif、else这些层次平齐，执行的代码都要缩进。</p>
+<h3 id="判断符">判断符</h3>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>作用</th>
+<th>符号</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>等于 =</td>
+<td>&gt;</td>
+<td>大于 &gt;</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>不等于 ≠</td>
+<td>&lt;</td>
+<td>小于 &lt;</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于等于 ≥</td>
+<td>&lt;=</td>
+<td>小于等于 ≤</td>
+</tr>
+</tbody>
+</table>
+<p>在交互式窗口里试试</p>
+<pre><code class="language-python">&gt;&gt;&gt; 4 + 9 == 13
+True
+&gt;&gt;&gt; 8 + 8 &gt; 23
+False
+...
+</code></pre>
+<p>也可以写进程序，放进if语句。</p>
+<pre><code class="language-python">a = 8
+b = &quot;8&quot;
+if a == b:
+  print(&quot;一样&quot;)
+else:
+  print(&quot;不一样&quot;)
+</code></pre>
+<p>结果当然是不一样，因为a是数字(整数类型)，而b是字符串。</p>
+<p>用if做一个分数等级判断器，看看考了优良还是合格。</p>
+<p>100 满分    90 优秀    80 良好    60 合格    1 不合格    0 没分数</p>
+<pre><code class="language-python">a = int( input(&quot;请输入分数:&quot;) )   # int() 可以把其他类型转换成整数类型，因为字符串不能进行比较
+if a &gt; 100 or a &lt; 0:             # 先挑出错误的分数
+  print(&quot;请检查是否输入正确的分数&quot;)
+elif a == 100:
+  print(&quot;满分&quot;)
+elif a &gt;= 90:
+  print(&quot;优秀&quot;)
+elif a &gt;= 80:
+  print(&quot;良好&quot;)
+elif a &gt;= 60:
+  print(&quot;合格&quot;)
+elif a &gt;= 1:
+  print(&quot;不合格&quot;)
+elif a == 0:
+  print(&quot;没分数&quot;)
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="https://img.duan.ee/z/2024/03/10/65ed49852865e.png" alt="" loading="lazy"></figure>
+<h1 id="23-or-and-not">2.3 or , and , not</h1>
+<p>or 是或，只要两边有一边是真的，就会变成真。</p>
+<pre><code class="language-python">&gt;&gt;&gt; 1 == 4 or &quot;6&quot; == &quot;6&quot;
+True
+&gt;&gt;&gt; True or False
+True
+&gt;&gt;&gt; True or True
+True
+</code></pre>
+<p>and 是与，只要两边都是真的，就会变成真的。</p>
+<pre><code class="language-python">&gt;&gt;&gt; False and True
+False
+&gt;&gt;&gt; False and False
+False
+&gt;&gt; True and True
+True
+
+</code></pre>
+<p>not 是否，它可以把一个值反过来。</p>
+<pre><code class="language-python">&gt;&gt;&gt; not False
+True
+&gt;&gt;&gt; not True
+False
+</code></pre>
+<h1 id="24-for-循环语句">2.4 for 循环语句</h1>
+<p>假如有一个程序，要求输出一千遍遍同样的文字，那这么多个print()要打到什么时候，用复制粘贴也可能打多打少*<mark>(看行数Doge)</mark>*，这时候，就要用到循环。</p>
+<p>如果你知道你要循环几遍，就可以用 for 循环语句，更加方便。</p>
+<pre><code>for i in range(1000):
+    print(&quot;Don't copy&quot;)
+</code></pre>
+<p>运行结果，看不清别怪我：<img src="https://img.duan.ee/z/2024/03/10/65ed4985a1ae0.png" alt="" loading="lazy"></p>
+<p>在 range() 里，填上要循环的次数，for和in之间的变量i就是目前循环了几次的变量(可以改成其他名称)，i 会从 0 到 1000之前(999)。</p>
+<p>如果range()里写的在详细一些，也一样。</p>
+<pre><code class="language-python">range(20)       #         到20之前
+range(0,20)     # 从0     到20之前
+range(0,1,20)   # 从0间隔1到20之前 
+</code></pre>
+<p>变量 i 同样可以修改为其他变量，如a\b\c\d...。</p>
+<p>for循环可以一层套一层。</p>
+<h1 id="25-while-循环语句">2.5 while 循环语句</h1>
+<p>while 也是一种循环语句，与for不同的是，它更适合不知道要循环几次的地方。</p>
+<pre><code class="language-python">while i &lt; 8:
+  print(&quot;hello&quot;)
+  i += 1    # i += 1 同等与 i = i + 1
+</code></pre>
+<p>while的工作原理是：如果后面的值为真，开始循环，每循环完一次，又会去判断，如果为真，就继续下一轮循环，如果为假，就退出循环。</p>
+<p>while循环可以一层套一层。</p>
+<h1 id="26-break-语句">2.6 break 语句</h1>
+<p>在循环中，经常能看到break语句，它的作用就是跳出循环。无论在什么地方，break都能跳出一层循环，这个循环可能是for，也可能是while。</p>
+<pre><code class="language-python">for i in range(10):
+  print(i)
+  if i == 7:
+    break
+</code></pre>
+<p>上面这些代码，执行结果如下。for循环从0开始，到7的时候，被break跳出了循环。</p>
+<pre><code class="language-python">0
+1
+2
+3
+4
+5
+6
+7
+</code></pre>
+<h1 id="27-continue-语句">2.7 continue 语句</h1>
+<p>continue 语句也出现在循环当中，它的作用就是跳过本次循环。当循环遇到continue的时候，for循环会直接进行下一次，如果已经是最后一次，就会正常跳出循环，而while遇到continue时，会跳过循环后面的语句，再次判断，真就新一次循环，假就跳出循环。</p>
+<pre><code class="language-python">for i in &quot;Pyxxthxxon&quot;:  # 让i遍历&quot;Pyxxthxxon&quot;的每一个字符
+    if i == &quot;x&quot;:        #检测&quot;x&quot;
+        continue        #如果是&quot;x&quot;就跳过
+    print(i,end=&quot;&quot;)     #输出i，end=&quot;&quot;是将print()输出末尾不换行。
+</code></pre>
+<p>这一段代码会输出Python，因为跳过了x。</p>
+<h1 id="28-forelse-和-whileelse-语句">2.8 for...else 和 while...else 语句</h1>
+<p>如果一个for循环或while循环不是通过break跳出的，也就是正常执行完的，就会执行后面的else语句。</p>
+<pre><code class="language-python">for i in range(6):
+  if i == 3:
+    break
+else:
+  print(&quot;我不会被执行，因为这个for循环到3的时候用break跳出来了&quot;)
+
+print(&quot;-------------&quot;)
+
+i = 0
+while i &lt; 6:
+  i += 1
+else:
+  print(&quot;我会被执行，因为这个while循环没有被break跳出&quot;)
+</code></pre>
+<p>执行结果</p>
+<pre><code class="language-python">-------------
+我会被执行，因为这个while循环没有被break跳出
+</code></pre>
+<h1 id="29-pass-空语句">2.9 pass 空语句</h1>
+<p>pass是一个空语句，它什么都不干，就是占位用的，可以保证程序的结构完整性。</p>
+<pre><code class="language-python">a = 666
+if a != 666:
+  pass         #这行是空语句，占位用的
+else:
+  print(&quot;Yes&quot;)
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#21-%E7%BC%A9%E8%BF%9B">2.1 缩进</a></li>
+<li><a href="#22-if-%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5">2.2 if 判断语句</a><br>
+*
+<ul>
+<li><a href="#%E5%88%A4%E6%96%AD%E7%AC%A6">判断符</a></li>
+</ul>
+</li>
+<li><a href="#23-or-and-not">2.3 or , and , not</a></li>
+<li><a href="#24-for-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5">2.4 for 循环语句</a></li>
+<li><a href="#25-while-%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5">2.5 while 循环语句</a></li>
+<li><a href="#26-break-%E8%AF%AD%E5%8F%A5">2.6 break 语句</a></li>
+<li><a href="#27-continue-%E8%AF%AD%E5%8F%A5">2.7 continue 语句</a></li>
+<li><a href="#28-forelse-%E5%92%8C-whileelse-%E8%AF%AD%E5%8F%A5">2.8 for...else 和 while...else 语句</a></li>
+<li><a href="#29-pass-%E7%A9%BA%E8%AF%AD%E5%8F%A5">2.9 pass 空语句</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://gchrweb.github.io/post/1-python-qi-meng/">
+              <h3 class="post-title">
+                1 Python启蒙
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by GCHR WEB
+  <a class="rss" href="https://gchrweb.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>3 列表与元组 | GCHR WEB</title>
+<link rel="shortcut icon" href="https://gchrweb.github.io/favicon.ico?v=1735985119322">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://gchrweb.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="3 列表与元组 | GCHR WEB - Atom Feed" href="https://gchrweb.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="3.1 print的更多参数
+print其实有很多的参数,下面列举常用参数
+end是修改换行的参数，例如print(&quot;hello&quot;,end=&quot;&quot;)，末尾会变成空白而不是换行。
+sep是修改逗号间隔的参..." />
+    <meta name="keywords" content="Python教程 从零到入门到放弃" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://gchrweb.github.io">
+  <img class="avatar" src="https://gchrweb.github.io/images/avatar.png?v=1735985119322" alt="">
+  </a>
+  <h1 class="site-title">
+    GCHR WEB
+  </h1>
+  <p class="site-description">
+    时间飞快流逝，记忆永远存在
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="github.com/geng-cr" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              3 列表与元组
+            </h2>
+            <div class="post-info">
+              <span>
+                2024-03-10
+              </span>
+              <span>
+                6 min read
+              </span>
+              
+                <a href="https://gchrweb.github.io/tag/oUg21zOr9/" class="post-tag">
+                  # Python教程 从零到入门到放弃
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h1 id="31-print的更多参数">3.1 print的更多参数</h1>
+<p>print其实有很多的参数,下面列举常用参数</p>
+<p><code>end</code>是修改换行的参数，例如<code>print(&quot;hello&quot;,end=&quot;&quot;)</code>，末尾会变成空白而不是换行。</p>
+<p><code>sep</code>是修改逗号间隔的参数，例如<code>print(&quot;a1&quot;,&quot;a2&quot;,sep=&quot;-&quot;)</code>就会输出<code>a1-a2</code>。</p>
+<p>print之中输出的量与量之间的逗号可以使用<code>+</code>来代替，输出的空格也会消失，但前提两个必须都是字符串，例如<code>print(&quot;S&quot;+&quot;B&quot;)</code>。</p>
+<h1 id="32-列表的认识">3.2 列表的认识</h1>
+<p>Python中有一种变量类型叫做列表，列表可以包含多个变量，也可以只包含一个变量。</p>
+<p><code>[&quot;我是0号&quot;,&quot;我是1号&quot;,2,3]</code></p>
+<p>上面就是一个普通的列表，列表可以包含任意的变量，因为列表本身是一种变量，所以可以套娃。</p>
+<p>Python以及许多编程语言都将数列以0为开头。Python列表就是如此，量与量之间使用逗号分隔，第一个是 0 号，第二个是 1 号，第三个就是 2 号。</p>
+<h1 id="33-列表的读取">3.3 列表的读取</h1>
+<p>以下代码先创建了一个名叫 a 的列表，然后读取第 0 个并输出，又读取第2个并输出。</p>
+<pre><code class="language-python">a = [&quot;北师大&quot;,&quot;浙师大&quot;,&quot;缅_北师大&quot;]  # 创建列表a，并设置三个量
+b = a[0]     # 将b设为a的第0项
+print(b)     # 输出变量b
+print(a[2])  # 直接输出a的第2项
+</code></pre>
+<p>运行结果</p>
+<pre><code class="language-python">北师大
+缅_北师大
+</code></pre>
+<p>代码中就可以看出来，可以使用<code>列表[位数]</code>来获取列表中的一个量。</p>
+<h1 id="34-列表的修改">3.4 列表的修改</h1>
+<p>可以使用<code>列表[位数]</code>来获取列表中的一个量，也可以用这种方式修改列表的一个量。</p>
+<pre><code class="language-python">a = [&quot;北师大&quot;,&quot;浙师大&quot;,&quot;缅_北师大&quot;]   # 创建列表a，并设置三个量
+print(a)                 # 输出列表a
+a[2] = &quot;大聪明师范学校&quot;  # 修改第2项的值
+print(a)                 # 再次输出列表a
+</code></pre>
+<p>运行结果:</p>
+<pre><code class="language-python">['北师大', '浙师大', '缅_北师大']
+['北师大', '浙师大', '大聪明师范学校']
+</code></pre>
+<p>可以看到，第2项被修改了</p>
+<h1 id="35-读取列表和字符串的片段">3.5 读取列表和字符串的片段</h1>
+<p>如果只想要列表或字符串的一部分，可以用方括号<code>[:]</code>，在中间写上要获取的片段。</p>
+<pre><code class="language-python">a = &quot;0123456789&quot;    # 创建一个字符串
+print(a[2:5])       # 截取字符串从2开始到5之前的值
+print(a[2:])        # 截取字符串从2开始到结尾的值
+print(a[:-2])       # 截取字符串从开头到倒数第2个的值(没有倒数0)
+b = [&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;]  # 创建一个列表
+print(b[2:5])       # 截取列表从2开始到5之前的值
+print(b[2:])        # 截取列表从2开始到末尾的值
+print(b[:-2])       # 截取列表从开头到倒数第2个的值(没有倒数0)
+</code></pre>
+<p>运行结果:</p>
+<pre><code class="language-python">234
+23456789
+01234567
+['2', '3', '4']
+['2', '3', '4', '5', '6', '7', '8', '9']
+['0', '1', '2', '3', '4', '5', '6', '7']
+</code></pre>
+<p>说简单点，方括号中间，冒号的作用是，从几到几之前</p>
+<h1 id="36-往列表添加内容">3.6 往列表添加内容</h1>
+<p>我们可以使用append()方法来向列表末尾添加内容，方法实例如下。</p>
+<pre><code class="language-python">a = ['谷歌','百度','必应'] # 创建列表a
+print(a)                   # 输出列表a
+a.append('搜狗')           # 添加内容&quot;搜狗&quot;
+print(a)                   # 再次输出列表a
+</code></pre>
+<p>运行结果:</p>
+<pre><code class="language-python">['谷歌', '百度', '必应']
+['谷歌', '百度', '必应', '搜狗']
+</code></pre>
+<h1 id="37-从列表中删除内容">3.7 从列表中删除内容</h1>
+<p>我们可以从列表中删除内容，并让后面的内容自动往前靠，只需要用到del，翻译为删除。</p>
+<pre><code class="language-python">a = ['谷歌','百度','必应','搜狗'] # 创建列表a
+print(a)    # 输出列表a
+del a[2]    # 删除位于第2的内容
+print(a)    # 再次输出列表a
+</code></pre>
+<p>运行结果:</p>
+<pre><code class="language-python">['谷歌', '百度', '必应', '搜狗']
+['谷歌', '百度', '搜狗']
+</code></pre>
+<h1 id="38-遍历列表内容">3.8 遍历列表内容</h1>
+<p>假如我们要对列表每个内容分开操作，可以使用for循环。</p>
+<p>而<code>len(列表或字符串)</code>这个函数可以得到列表的项数或字符串的字符数。</p>
+<p>比如要将每个内容分开输出，我们可以写出以下程序(不推荐):</p>
+<pre><code class="language-python"># &lt;代码自行消化理解-不推荐使用这种方法&gt;
+
+a = ['谷歌','百度','必应','搜狗']
+for i in range(len(a)):
+  print(a[i])
+</code></pre>
+<p>当然也可以使用for的遍历方法(非常推荐):</p>
+<pre><code class="language-python">a = ['谷歌','百度','必应','搜狗']
+for i in a:  # 变量i是循环中列表当前循环到的变量值
+  print(i)   # 输出变量i
+</code></pre>
+<p>两种运行结果一致:</p>
+<pre><code class="language-python">谷歌
+百度
+必应
+搜狗
+</code></pre>
+<h1 id="39-元组">3.9 元组</h1>
+<p>元组是一种和列表及其相似的类型，和列表唯一的区别就是，元组创建后就不能够修改，只能读取内容。元组使用普通括号写成。要修改元组，只能整个元组一起修改。</p>
+<pre><code class="language-python">a = ('a',&quot;b&quot;,'c')
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#31-print%E7%9A%84%E6%9B%B4%E5%A4%9A%E5%8F%82%E6%95%B0">3.1 print的更多参数</a></li>
+<li><a href="#32-%E5%88%97%E8%A1%A8%E7%9A%84%E8%AE%A4%E8%AF%86">3.2 列表的认识</a></li>
+<li><a href="#33-%E5%88%97%E8%A1%A8%E7%9A%84%E8%AF%BB%E5%8F%96">3.3 列表的读取</a></li>
+<li><a href="#34-%E5%88%97%E8%A1%A8%E7%9A%84%E4%BF%AE%E6%94%B9">3.4 列表的修改</a></li>
+<li><a href="#35-%E8%AF%BB%E5%8F%96%E5%88%97%E8%A1%A8%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E7%89%87%E6%AE%B5">3.5 读取列表和字符串的片段</a></li>
+<li><a href="#36-%E5%BE%80%E5%88%97%E8%A1%A8%E6%B7%BB%E5%8A%A0%E5%86%85%E5%AE%B9">3.6 往列表添加内容</a></li>
+<li><a href="#37-%E4%BB%8E%E5%88%97%E8%A1%A8%E4%B8%AD%E5%88%A0%E9%99%A4%E5%86%85%E5%AE%B9">3.7 从列表中删除内容</a></li>
+<li><a href="#38-%E9%81%8D%E5%8E%86%E5%88%97%E8%A1%A8%E5%86%85%E5%AE%B9">3.8 遍历列表内容</a></li>
+<li><a href="#39-%E5%85%83%E7%BB%84">3.9 元组</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://gchrweb.github.io/post/2-pan-duan-yu-xun-huan/">
+              <h3 class="post-title">
+                2 判断与循环
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by GCHR WEB
+  <a class="rss" href="https://gchrweb.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
